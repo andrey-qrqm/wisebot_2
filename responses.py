@@ -16,7 +16,7 @@ def handle_response(message) -> str:
     if p_message == 'андрей':
         return 'ебал в рот гит и все такое далее'
     if p_message == 'сева':
-        return 'возьмёт 1v5 но всё равно проебет старшего'
+        return 'возьмёт 1v5 но всё равно проебет нашора'
     if p_message == 'аким':
         return 'душнит так что хуй залупа муравей в ахуе'
 
