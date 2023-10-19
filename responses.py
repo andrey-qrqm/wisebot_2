@@ -8,7 +8,7 @@ def handle_response(message) -> str:
     if p_message == 'help':
         return ' Im not gonna help you motherfucker! '
     if p_message == 'антон':
-        return 'веткаа main'
+        return 'все я спать нахуй'
     if p_message == 'макс':
         return 'любитель отчимов'
     if p_message == 'event':
