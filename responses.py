@@ -14,7 +14,7 @@ def handle_response(message, author) -> str:
     if p_message == 'макс':
         return 'любитель отчимов'
     if p_message == 'event':
-        return 'WiseBot хочет чтобы ты ' + random_event.event()
+        return 'WiseBot хочет чтобы '+ author + ' ' + random_event.event()
     if p_message == 'андрей':
         return 'ебал в рот гит и все такое далее'
     if p_message == 'сева':
