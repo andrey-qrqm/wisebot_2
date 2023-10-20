@@ -1,6 +1,8 @@
 import random_event
+#from bot import username_ret
+import discord
 
-def handle_response(message) -> str:
+def handle_response(message, author) -> str:
     p_message = message.lower()
 
     if p_message == 'hello':
@@ -19,5 +21,7 @@ def handle_response(message) -> str:
         return 'возьмёт 1v5 но всё равно проебет нашора'
     if p_message == 'аким':
         return 'душнит так что хуй залупа муравей в ахуе'
+    if p_message == 'автор':
+        return author
 
 #print(handle_response('event'))
