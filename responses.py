@@ -1,6 +1,5 @@
 import random_event
-#from bot import username_ret
-import discord
+import responses
 
 def handle_response(message, author) -> str:
     p_message = message.lower()
