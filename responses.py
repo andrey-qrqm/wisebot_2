@@ -21,6 +21,11 @@ def handle_response(message, author) -> str:
     if p_message == 'аким':
         return 'душнит так что хуй залупа муравей в ахуе'
     if p_message == 'автор':
-        return author
+        return get_nickname(author)
 
-#print(handle_response('event'))
+
+def get_nickname(author):
+    i = author.index('(') + 1
+    nickname = author[i:(len(author) - 1)]
+    return nickname
+
