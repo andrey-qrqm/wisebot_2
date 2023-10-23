@@ -35,5 +35,7 @@ def get_nickname(author):
         else:
             return author
     except Exception as e:
+        print(e)
         return author
+
 
