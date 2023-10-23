@@ -22,6 +22,8 @@ def handle_response(message, author) -> str:
         return 'душнит так что хуй залупа муравей в ахуе'
     if p_message == 'автор':
         return get_nickname(author)
+    if p_message == 'роль':
+        return "WiseBot выбрал " + get_nickname(author) + " " + random_event.random_role()
 
 
 def get_nickname(author):

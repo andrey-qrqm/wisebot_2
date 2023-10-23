@@ -1,5 +1,14 @@
 import random
 
+def random_role():
+    role_list = ["top",
+                 "jungle",
+                 "mid",
+                 "bot",
+                 "support"]
+
+    return role_list[random.randint(0,len(role_list))]
+
 def event():
     Event_list = ["играл на йордле",
                   "играл сапом с карой",
