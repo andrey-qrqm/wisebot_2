@@ -27,7 +27,10 @@ def handle_response(message, author) -> str:
 
 
 def get_nickname(author):
-    i = author.index('(') + 1
-    nickname = author[i:(len(author) - 1)]
-    return nickname
+    try:
+        i = author.index('(') + 1
+        nickname = author[i:(len(author) - 1)]
+        return nickname
+    except Exception as e:
+        return author
 
