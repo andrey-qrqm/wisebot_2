@@ -23,7 +23,7 @@ def handle_response(message, author) -> str:
     if p_message == 'автор':
         return get_nickname(author)
     if p_message == 'роль':
-        return "WiseBot хочет " + get_nickname(author) + " " + random_event.random_role()
+        return 'WiseBot хочет ' + get_nickname(author) + ' ' + random_event.random_role()
 
 
 def get_nickname(author):
