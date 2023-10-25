@@ -12,7 +12,7 @@ def random_role():
 
 def event(role):
     chosen_event = ""
-
+    print(role)
     if not role:
         return Event_list_rofl[random.randint(0, len(Event_list_rofl))]
     else:
