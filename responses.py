@@ -12,8 +12,15 @@ def handle_response(message, author) -> str:
         return 'негр и пидорас но хороший человек'
     if p_message == 'макс':
         return 'любитель 40 отчимов'
-    if p_message == 'event':
-        return 'WiseBot хочет чтобы '+ author + ' ' + random_event.event()
+    if p_message[:5] == 'event':
+        if len(p_message)>5:
+            arg_role = p_message[5:]
+        else:
+            arg_role = ""
+        if arg_role:
+            return 'WiseBot хочет чтобы '+ author + ' ' + random_event.event(arg_role)
+        else:
+            return 'Роль не указана, WiseBot хочет чтобы ' + author + ' ' + random_event.event(arg_role)
     if p_message == 'андрей':
         return 'ебал в рот гит и всех в мут нахуй'
     if p_message == 'сева':
