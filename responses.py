@@ -14,7 +14,7 @@ def handle_response(message, author) -> str:
         return 'любитель 40 отчимов'
     if p_message[:5] == 'event':
         if len(p_message)>5:
-            arg_role = p_message[5:]
+            arg_role = p_message[6:]
         else:
             arg_role = ""
         if arg_role:
