@@ -11,13 +11,13 @@ def handle_response(message, author) -> str:
     if p_message == 'антон':
         return 'негр и пидорас но хороший человек'
     if p_message == 'макс':
-        return 'любитель отчимов'
+        return 'любитель 40 отчимов'
     if p_message == 'event':
         return 'WiseBot хочет чтобы '+ author + ' ' + random_event.event()
     if p_message == 'андрей':
-        return 'ебал в рот гит и все такое далее'
+        return 'ебал в рот гит и всех в мут нахуй'
     if p_message == 'сева':
-        return 'возьмёт 1v5 но всё равно проебет нашора'
+        return 'хентай бойчик опять мисснул карой'
     if p_message == 'аким':
         return 'душнит так что хуй залупа муравей в ахуе'
     if p_message == 'автор':
