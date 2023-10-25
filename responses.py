@@ -18,7 +18,7 @@ def handle_response(message, author) -> str:
         else:
             arg_role = ""
         if arg_role:
-            return 'WiseBot хочет чтобы '+ author + ' ' + random_event.event(arg_role) + ' роль - ' + arg_role
+            return 'WiseBot хочет чтобы '+ author + ' ' + random_event.event(arg_role)
         else:
             return 'Роль не указана, WiseBot хочет чтобы ' + author + ' ' + random_event.event(arg_role)
     if p_message == 'андрей':
