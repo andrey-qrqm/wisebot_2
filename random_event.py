@@ -13,35 +13,35 @@ def random_role():
 def event(role):
     chosen_event = ""
 #    print(role)
-    if not role:
-        return Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-    else:
-        if role == 'топ' or role == 'top':
-            if random.randint(0,10)>=5:
-                chosen_event = Event_list_top[random.randint(0, len(Event_list_top))]
-            else:
-                chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-        if role == 'мид' or role == 'mid':
-            if random.randint(0,10)>=5:
-                chosen_event = Event_list_mid[random.randint(0, len(Event_list_mid))]
-            else:
-                chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-        if role == 'лес' or role == 'jng':
-            if random.randint(0,10)>=5:
-                chosen_event = Event_list_jng[random.randint(0, len(Event_list_jng))]
-            else:
-                chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-        if role == 'бот' or role == 'адк' or role == 'bot' or role == 'adc':
-            if random.randint(0,10)>=5:
-                chosen_event = Event_list_bot[random.randint(0, len(Event_list_bot))]
-            else:
-                chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-        if role == 'сап' or role == 'sup':
-            if random.randint(0,10)>=5:
-                chosen_event = Event_list_sup[random.randint(0, len(Event_list_sup))]
-            else:
-                chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-        return chosen_event
+
+    if role == 'топ' or role == 'top':
+        if random.randint(0,10)>=5:
+            chosen_event = Event_list_top[random.randint(0, len(Event_list_top))]
+        else:
+            chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
+    if role == 'мид' or role == 'mid':
+        if random.randint(0,10)>=5:
+            chosen_event = Event_list_mid[random.randint(0, len(Event_list_mid))]
+        else:
+            chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
+    if role == 'лес' or role == 'jng':
+        if random.randint(0,10)>=5:
+            chosen_event = Event_list_jng[random.randint(0, len(Event_list_jng))]
+        else:
+            chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
+    if role == 'бот' or role == 'адк' or role == 'bot' or role == 'adc':
+        if random.randint(0,10)>=5:
+            chosen_event = Event_list_bot[random.randint(0, len(Event_list_bot))]
+        else:
+            chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
+    if role == 'сап' or role == 'sup':
+        if random.randint(0,10)>=5:
+            chosen_event = Event_list_sup[random.randint(0, len(Event_list_sup))]
+        else:
+            chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
+    if not chosen_event:
+        chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
+    return chosen_event
 
 
 
