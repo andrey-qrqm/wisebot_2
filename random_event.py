@@ -26,7 +26,7 @@ def event(role):
                 chosen_event = Event_list_mid[random.randint(0, len(Event_list_mid))]
             else:
                 chosen_event = Event_list_rofl[random.randint(0, len(Event_list_rofl))]
-        if role == 'лес' or role == 'jgl':
+        if role == 'лес' or role == 'jng':
             if random.randint(0,10)>=5:
                 chosen_event = Event_list_jng[random.randint(0, len(Event_list_jng))]
             else:
