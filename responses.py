@@ -1,5 +1,5 @@
 import random_event
-import responses
+
 
 def handle_response(message, author) -> str:
     p_message = message.lower()
