@@ -40,7 +40,7 @@ def run_discord_bot(TOKEN):
             amount = 20
             if '[' in user_message:
                 amount = int(user_message[user_message.index('[')+1:user_message.index(']')])
-            #await message.channel.send(str(amount))
+            await message.channel.send(str(amount))
             await message.channel.purge(limit=amount)
 
 
