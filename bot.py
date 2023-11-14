@@ -1,5 +1,6 @@
 import discord
 import responses
+from discord.ext.commands import Bot
 
 intents = discord.Intents.all()
 
@@ -13,7 +14,8 @@ async def send_message(message, user_message, is_private):
 def run_discord_bot(TOKEN):
     intents = discord.Intents.all()
 
-    client = discord.Client(intents=intents)
+    client = Bot('!', intents=intents)
+
 
     @client.event
     async def on_ready():
@@ -37,6 +39,9 @@ def run_discord_bot(TOKEN):
         else:
             await send_message(message, user_message, is_private=False)
 
+    @client.command(name='clear', help='this command will clear msgs')
+    async def clear(ctx, amount=5):
+        await ctx.channel.purge(limit=amount)
 
 
     client.run(TOKEN)
