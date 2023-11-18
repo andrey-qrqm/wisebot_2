@@ -5,9 +5,10 @@ def handle_response(message, author) -> str:
     p_message = message.lower()
 
     if p_message == 'hello':
-        return ' Shut the fuck up!'
+        return " Shut your mouth motherfucker"
     if p_message == 'help':
-        return ' Im not gonna help you motherfucker! '
+        full = "Антон наконец меня заебал, \n event - рандомный ивент на игру. \n event роль - ивент на конкретную роль.\n роль - рандомная роль. \n !clear[n] - удалить последние n сообщений, по дефолту удаляется 20"
+        return full
     if p_message == 'антон':
         return 'негр и пидорас но хороший человек'
     if p_message == 'макс':
