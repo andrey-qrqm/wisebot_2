@@ -7,7 +7,7 @@ def handle_response(message, author) -> str:
     if p_message == 'hello':
         return " Shut your mouth motherfucker"
     if p_message == 'help':
-        full = "Антон наконец меня заебал, \n event - рандомный ивент на игру. \n event роль - ивент на конкретную роль.\n роль - рандомная роль. \n !clear[n] - удалить последние n сообщений, по дефолту удаляется 20"
+        full = "Антон наконец меня заебал, \nevent - рандомный ивент на игру. \nevent роль - ивент на конкретную роль.\nроль - рандомная роль. \n!clear[n] - удалить последние n сообщений, по дефолту удаляется 20"
         return full
     if p_message == 'антон':
         return 'негр и пидорас но хороший человек'
