@@ -1,8 +1,10 @@
 import discord
 import responses
+import random_event
 from discord.ext import commands
 
 intents = discord.Intents.all()
+GUILD_LIST = [1093702980303323177, 1143975152930017352]
 
 async def send_message(message, user_message, is_private):
     try:
@@ -23,6 +25,22 @@ def run_discord_bot(TOKEN):
 
 
 
+    @client.slash_command(name="clear", argparse="amount", guild_ids=GUILD_LIST, description="Delete n messages from this text channel")
+    async def clear(ctx, arg):
+        amount = 20
+        if arg:
+            amount = int(arg)
+        await ctx.respond(str(amount))
+        await ctx.channel.purge(limit=amount)
+
+    @client.slash_command(name="role", guild_ids=GUILD_LIST, description="Get a random role")
+    async def role(ctx):
+        await ctx.respond(random_event.random_role())
+
+
+    @client.slash_command(name="event", argparse="role", guild_ids=GUILD_LIST, description="Get a random event suitable for your role. Roles list = [top, jng, mid, bot, sup]")
+    async def event(ctx, role):
+        await ctx.respond("WiseBot хочет чтобы "+ str(ctx.author.display_name) + " "+random_event.event(role))
 
     @client.event
     async def on_message(message):
