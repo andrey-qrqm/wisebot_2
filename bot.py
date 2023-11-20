@@ -40,7 +40,13 @@ def run_discord_bot(TOKEN):
 
     @client.slash_command(name="event", argparse="role", guild_ids=GUILD_LIST, description="Get a random event suitable for your role. Roles list = [top, jng, mid, bot, sup]")
     async def event(ctx, role):
-        await ctx.respond("WiseBot хочет чтобы "+ str(ctx.author.display_name) + " "+random_event.event(role))
+        message_author = responses.get_nickname(str(ctx.author.display_name))
+        await ctx.respond("WiseBot хочет чтобы "+ message_author + " "+random_event.event(role))
+
+
+    @client.slash_command(name="help", guild_ids=GUILD_LIST, description="Why do u need description for the help??? It's just list of commands lol")
+    async def help(ctx):
+        await ctx.respond(responses.handle_response('help', str(ctx.author.display_name) ))
 
     @client.event
     async def on_message(message):
