@@ -1,6 +1,7 @@
 import discord
 import responses
 import random_event
+from openai import AsyncOpenAI
 from discord.ext import commands
 
 intents = discord.Intents.all()
@@ -13,11 +14,12 @@ async def send_message(message, user_message, is_private):
     except Exception as e:
         print(e)
 
-def run_discord_bot(TOKEN):
+def run_discord_bot(TOKEN, AI_TOKEN):
     intents = discord.Intents.all()
 
     client = commands.Bot(command_prefix='!', intents=intents)
-
+    ai_client = AsyncOpenAI(api_key=AI_TOKEN)
+    chat_log = []
 
     @client.event
     async def on_ready():
@@ -47,6 +49,14 @@ def run_discord_bot(TOKEN):
     @client.slash_command(name="help", guild_ids=GUILD_LIST, description="Why do u need description for the help??? It's just list of commands lol")
     async def help(ctx):
         await ctx.respond(responses.handle_response('help', str(ctx.author.display_name) ))
+
+    @client.slash_command(name="ai_test", argparse="input_text", guild_ids=GUILD_LIST, description="Openai api test")
+    async def ai_test(ctx, input_text):
+        chat_log.append({"role": "user", "content": input_text})
+        completion = await ai_client.chat.completions.create(model="gpt-3.5-turbo", messages=chat_log)
+        assistant_response = completion.choices[0].message.content
+        await ctx.respond(str(assistant_response.strip("\n")))
+        chat_log.append({"role": "assistant", "content": str(assistant_response.strip("\n"))})
 
     @client.event
     async def on_message(message):
