@@ -1,4 +1,0 @@
-URL: https://discord.com/api/oauth2/authorize?client_id=1160575521269223475&permissions=2183991392320&scope=bot
-TOKEN: MTE2MDU3NTUyMTI2OTIyMzQ3NQ.GxX6Uq.zzN-TzylO3Pc25Za-2VNPabYBw_fVMEDzUj64E
-RIOT TOKEN: RGAPI-dc056ac8-98fd-49e0-b58d-dfe1ebb33dae
-AI_API: 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
