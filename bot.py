@@ -14,11 +14,10 @@ async def send_message(message, user_message, is_private):
     except Exception as e:
         print(e)
 
-def run_discord_bot(TOKEN, AI_TOKEN):
+def run_discord_bot(TOKEN):
     intents = discord.Intents.all()
 
     client = commands.Bot(command_prefix='!', intents=intents)
-    ai_client = AsyncOpenAI(api_key=AI_TOKEN)
     chat_log = []
 
     @client.event
