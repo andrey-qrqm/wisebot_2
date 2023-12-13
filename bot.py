@@ -1,7 +1,6 @@
 import discord
 import responses
 import random_event
-from openai import AsyncOpenAI
 from discord.ext import commands
 
 intents = discord.Intents.all()
