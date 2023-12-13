@@ -43,7 +43,7 @@ def run_discord_bot(TOKEN):
         await ctx.respond("WiseBot хочет чтобы "+ message_author + " "+random_event.event(role))
 
 
-    @client.slash_command(name="help", guild_ids=GUILD_LIST, description="Why do u need description for the help??? It's just list of commands lol")
+    @client.slash_command(name="help", guild_ids=GUILD_LIST, description="list of commands")
     async def help(ctx):
         await ctx.respond(responses.handle_response('help', str(ctx.author.display_name) ))
 
