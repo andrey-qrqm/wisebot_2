@@ -5,7 +5,7 @@ def handle_response(message, author) -> str:
     p_message = message.lower()
 
     if p_message == 'help':
-        full = "Антон наконец меня заебал, \n/event роль - ивент на конкретную роль.\n/role - рандомная роль. \n/clear amount - удалить последние n сообщений, по дефолту удаляется 20\n"
+        full = "\n/event роль - ивент на конкретную роль.\n/role - рандомная роль. \n/clear amount - удалить последние n сообщений, по дефолту удаляется 20\n"
         return full
     if p_message[:5] == 'event':
         if len(p_message)>5:
