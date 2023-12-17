@@ -57,7 +57,7 @@ def run_discord_bot(TOKEN):
         user_message = str(message.content)
         channel = str(message.channel)
 
-        print(f'{username} is shitting {user_message} in {channel}')
+        print(f'{username} is writting {user_message} in {channel}')
 
         if user_message.startswith('!clear'):
             amount = 20
